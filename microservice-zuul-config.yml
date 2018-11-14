@@ -1,31 +1,31 @@
 spring:
-    profiles: 
-        active:
-        - dev
-        
---- 
+  profiles:
+    active:
+  - dev
+
+---
 spring:
-    profiles: dev
-    application:
-        name: microservice-zuul-config  
+  profiles: dev
+  application:
+    name: microservice-zuul-config
 server:
   port: 9527
 eureka:
-    client:
-      register-with-eureka: false
-      service-url:
-        defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
 
 #开启断路器
 feign:
   hystrix:
     enabled: true
-    
+
 ribbon:
-    eureka:
-        enabled: true
-    ReadTimeout: 60000
-    ConnectTimeout: 60000
+  eureka:
+      enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 
 hystrix:
   command:
@@ -33,37 +33,37 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 60000  
+            timeoutInMilliseconds: 60000
 
-  
+
 zuul:
-    host:
-        socket-timeout-millis: 60000
-        connect-timeout-millis: 60000
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
   routes:
     mydept.serviceId: microservice-provider-dept
     mydept.path: /mydept/**
   ignored-services: microservice-provider-dept
   prefix: /hgits
-  
-  
+
+
 
 info:
   app.name: atguigu-microsevicecloud
   comany.name: www.it.hgits.com
-  
---- 
+
+---
 spring:
-    profiles: test
-    application:
-        name: microservice-zuul-config  
+  profiles: test
+  application:
+    name: microservice-zuul-config
 server:
   port: 9527
 eureka:
-    client:
-      register-with-eureka: false
-      service-url:
-        defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
 
 #开启断路器
 feign:
@@ -71,10 +71,22 @@ feign:
     enabled: true
 
 ribbon:
-    eureka:
-        enabled: true
+  eureka:
+      enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
 zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
   routes:
     mydept.serviceId: microservice-provider-dept
     mydept.path: /mydept/**
