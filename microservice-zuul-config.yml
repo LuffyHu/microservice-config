@@ -25,7 +25,7 @@ zuul:
     mydept.serviceId: microservice-provider-dept
     mydept.path: /mydept/**
   ignored-services: microservice-provider-dept
-  prefix: /atguigu
+  prefix: /hgits
 
 info:
   app.name: atguigu-microsevicecloud
@@ -53,7 +53,7 @@ zuul:
     mydept.serviceId: microservice-provider-dept
     mydept.path: /mydept/**
   ignored-services: microservice-provider-dept
-  prefix: /atguigu
+  prefix: /hgits
 
 info:
   app.name: atguigu-microsevicecloud
