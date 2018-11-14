@@ -20,6 +20,9 @@ eureka:
     instance:
       prefer-ip-address: true
       instance-id: zuul-9527.com
+feign:
+  hystrix:
+    enabled: true
 
 zuul:
   routes:
