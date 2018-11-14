@@ -20,6 +20,7 @@ eureka:
     instance:
       prefer-ip-address: true
       instance-id: zuul-9527.com
+
 feign:
   hystrix:
     enabled: true
@@ -62,12 +63,19 @@ eureka:
       prefer-ip-address: true
       instance-id: zuul-9527.com
 
+feign:
+  hystrix:
+    enabled: true
+
 zuul:
   routes:
-    mydept.serviceId: microservice-dept-config,microservice-shop-config
-  ignored-services: microservice-dept-config,microservice-shop-config
-  prefix: /microservice
-
+    micro-dept:
+      path: /micro-dept/**
+      serviceId: microservice-dept-config
+    micro-shop:
+      path: /micro-shop/**
+      serviceId: microservice-shop-config
+  ignored-services: '*'
 #开启断路器
 feign:
   hystrix:
