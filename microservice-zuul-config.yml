@@ -1,16 +1,17 @@
 spring:
-  profiles:
-    active:
-  - dev
-
+    profiles: 
+        active:
+        - dev
+        
 ---
-spring:
-  profiles: dev
-  application:
-    name: microservice-zuul-config
-    
 server:
   port: 9527
+  
+spring:
+    profiles: dev
+    application:
+        name: microservice-zuul-config        
+
 eureka:
   client:
     register-with-eureka: false
@@ -34,15 +35,19 @@ feign:
 
 info:
   app.name: atguigu-microsevicecloud
-  comany.name: www.it.hgits.com
-
+  comany.name: www.it.hgits.com  
+  
+  
 ---
-spring:
-  profiles: test
-  application:
-    name: microservice-zuul-config
+
 server:
   port: 9527
+  
+spring:
+    profiles: test
+    application:
+        name: microservice-zuul-config        
+
 eureka:
   client:
     register-with-eureka: false
@@ -66,4 +71,5 @@ feign:
 
 info:
   app.name: atguigu-microsevicecloud
-  comany.name: www.it.hgits.com
+  comany.name: www.it.hgits.com  
+  
