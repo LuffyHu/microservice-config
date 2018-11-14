@@ -23,10 +23,9 @@ eureka:
 
 zuul:
   routes:
-    mydept.serviceId: microservice-dept-config
-    mydept.path: /mydept/**
-  ignored-services: microservice-dept-config
-  prefix: /hgits
+    mydept.serviceId: microservice-dept-config,microservice-shop-config
+  ignored-services: microservice-dept-config,microservice-shop-config
+  prefix: /microservice
 
 #开启断路器
 feign:
@@ -59,10 +58,9 @@ eureka:
 
 zuul:
   routes:
-    mydept.serviceId: microservice-dept-config
-    mydept.path: /mydept/**
-  ignored-services: microservice-dept-config
-  prefix: /hgits
+    mydept.serviceId: microservice-dept-config,microservice-shop-config
+  ignored-services: microservice-dept-config,microservice-shop-config
+  prefix: /microservice
 
 #开启断路器
 feign:
