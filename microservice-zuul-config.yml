@@ -26,13 +26,27 @@ ribbon:
         enabled: true
     ReadTimeout: 60000
     ConnectTimeout: 60000
-    
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000  
+
+  
 zuul:
+    host:
+        socket-timeout-millis: 60000
+        connect-timeout-millis: 60000
   routes:
     mydept.serviceId: microservice-provider-dept
     mydept.path: /mydept/**
   ignored-services: microservice-provider-dept
   prefix: /hgits
+  
+  
 
 info:
   app.name: atguigu-microsevicecloud
