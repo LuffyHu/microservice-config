@@ -30,7 +30,7 @@ mybatis:
 
 logging:
     level:
-        org.mybatis: DEBUG
+        com.hgits.springcloud: DEBUG
   
   
 eureka:
