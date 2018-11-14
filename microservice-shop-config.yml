@@ -28,6 +28,10 @@ mybatis:
   type-aliases-package: com.hgits.springcloud.entity
   mapper-locations: classpath:mybatis/mappers/**/*.xml          
 
+logging:
+    level:
+        org.mybatis: DEBUG
+  
   
 eureka:
   client:
