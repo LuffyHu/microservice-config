@@ -23,9 +23,9 @@ eureka:
 
 zuul:
   routes:
-    mydept.serviceId: microservice-dept-config
+    mydept.serviceId: microservice-dept-consumer
     mydept.path: /mydept/**
-  ignored-services: microservice-dept-config
+  ignored-services: microservice-dept-consumer
   prefix: /hgits
 
 #开启断路器
@@ -59,9 +59,9 @@ eureka:
 
 zuul:
   routes:
-    mydept.serviceId: microservice-dept-config
+    mydept.serviceId: microservice-dept-consumer
     mydept.path: /mydept/**
-  ignored-services: microservice-dept-config
+  ignored-services: microservice-dept-consumer
   prefix: /hgits
 
 #开启断路器
