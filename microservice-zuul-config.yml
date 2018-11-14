@@ -1,0 +1,60 @@
+spring:
+    profiles: 
+        active:
+        - dev
+        
+--- 
+spring:
+    profiles: dev
+    application:
+        name: microservice-zuul-config  
+server:
+  port: 9527
+eureka:
+    client:
+      register-with-eureka: false
+      service-url:
+        defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+
+#开启断路器
+feign:
+  hystrix:
+    enabled: true
+zuul:
+  routes:
+    mydept.serviceId: microservice-provider-dept
+    mydept.path: /mydept/**
+  ignored-services: microservice-provider-dept
+  prefix: /atguigu
+
+info:
+  app.name: atguigu-microsevicecloud
+  comany.name: www.it.hgits.com
+  
+--- 
+spring:
+    profiles: test
+    application:
+        name: microservice-zuul-config  
+server:
+  port: 9527
+eureka:
+    client:
+      register-with-eureka: false
+      service-url:
+        defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+
+#开启断路器
+feign:
+  hystrix:
+    enabled: true
+zuul:
+  routes:
+    mydept.serviceId: microservice-provider-dept
+    mydept.path: /mydept/**
+  ignored-services: microservice-provider-dept
+  prefix: /atguigu
+
+info:
+  app.name: atguigu-microsevicecloud
+  comany.name: www.it.hgits.com
