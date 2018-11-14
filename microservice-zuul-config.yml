@@ -23,10 +23,13 @@ eureka:
 
 zuul:
   routes:
-    mydept.serviceId: microservice-dept-config,microservice-shop-config
-  ignored-services: microservice-dept-config,microservice-shop-config
-  prefix: /microservice
-
+    micro-dept:
+      path: /micro-dept/**
+      serviceId: microservice-dept-config
+    micro-shop:
+      path: /micro-shop/**
+      serviceId: microservice-shop-config
+  ignored-services: '*'
 #开启断路器
 feign:
   hystrix:
