@@ -11,12 +11,8 @@ spring:
     profiles: dev
     application:
         name: microservice-zuul-config        
-feign: 
-  hystrix: 
-    enabled: true
 
-        
-        
+           
 eureka:
   client:
     register-with-eureka: false
@@ -64,10 +60,6 @@ eureka:
     instance:
       prefer-ip-address: true
       instance-id: zuul-9527.com
-
-feign:
-  hystrix:
-    enabled: true
 
 zuul:
   routes:
