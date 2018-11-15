@@ -22,6 +22,10 @@ spring:
           initial-size: 5
           max-total: 5
           max-wait-millis: 200
+          
+logging:
+    level:
+        com.hgits.springcloud: DEBUG          
 
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
@@ -69,7 +73,11 @@ mybatis:
   type-aliases-package: com.hgits.springcloud.entity
   mapper-locations: classpath:mybatis/mappers/**/*.xml          
 
+logging:
+    level:
+        com.hgits.springcloud: DEBUG  
   
+
 eureka:
   client:
     service-url:
