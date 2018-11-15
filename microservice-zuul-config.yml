@@ -24,14 +24,12 @@ eureka:
 
 
 zuul:
-  routes:
-    micro-dept:
-      path: /micro-dept/**
-      serviceId: microservice-dept-config
-    micro-shop:
-      path: /micro-shop/**
-      serviceId: microservice-shop-config
   ignored-services: '*'
+  routes:
+    microservice-dept-config: /microservice/**
+    microservice-shop-config: /microservice/**
+    microservice-product-config: /microservice/**
+  
 #开启断路器
 feign:
   hystrix:
@@ -62,14 +60,11 @@ eureka:
       instance-id: zuul-9527.com
 
 zuul:
-  routes:
-    micro-dept:
-      path: /micro-dept/**
-      serviceId: microservice-dept-config
-    micro-shop:
-      path: /micro-shop/**
-      serviceId: microservice-shop-config
   ignored-services: '*'
+  routes:
+    microservice-dept-config: /microservice/**
+    microservice-shop-config: /microservice/**
+    microservice-product-config: /microservice/**
 #开启断路器
 feign:
   hystrix:
