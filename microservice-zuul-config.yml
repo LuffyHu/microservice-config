@@ -26,15 +26,9 @@ eureka:
 zuul:
   ignored-services: '*'
   routes:
-    micro-dept:
-      path: /micorservice/**
-      serviceId: microservice-dept-config
-    micro-product:
-      path: /micorservice/**
-      serviceId: microservice-product-config
-    micro-shop:
-      path: /micorservice/**
-      serviceId: microservice-shop-config
+    microservice-dept-config: /micro-dept/**
+    microservice-product-config: /micro-product/**
+    microservice-shop-config: /micro-shop/**
   
 #开启断路器
 feign:
@@ -68,15 +62,9 @@ eureka:
 zuul:
   ignored-services: '*'
   routes:
-    micro-dept:
-      path: /micorservice/**
-      serviceId: microservice-dept-config
-    micro-product:
-      path: /micorservice/**
-      serviceId: microservice-product-config
-    micro-shop:
-      path: /micorservice/**
-      serviceId: microservice-shop-config
+    microservice-dept-config: /micro-dept/**
+    microservice-product-config: /micro-product/**
+    microservice-shop-config: /micro-shop/**
 #开启断路器
 feign:
   hystrix:
