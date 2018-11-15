@@ -10,11 +10,11 @@ server:
 spring:
     profiles: dev
     application:
-        name: microservice-dept-config        
+        name: microservice-product-config        
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: org.gjt.mm.mysql.Driver
-        url: jdbc:mysql://localhost:3306/shop_plat
+        url: jdbc:mysql://localhost:3306/clouddb03
         username: root
         password: yy123456
         dbcp2:
@@ -35,7 +35,7 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
     prefer-ip-address: true
-    instance-id: microservice-dept-config
+    instance-id: microservice-product-config
 
 info:
   app.name: atguigu-microservicecloud
@@ -51,11 +51,11 @@ server:
 spring:
     profiles: test
     application:
-        name: microservice-dept-config        
+        name: microservice-product-config        
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: org.gjt.mm.mysql.Driver
-        url: jdbc:mysql://localhost:3306/shop_plat
+        url: jdbc:mysql://localhost:3306/clouddb03
         username: root
         password: yy123456
         dbcp2:
@@ -76,7 +76,7 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
     prefer-ip-address: true
-    instance-id: microservice-dept-config
+    instance-id: microservice-product-config
 
 info:
   app.name: atguigu-microservicecloud
